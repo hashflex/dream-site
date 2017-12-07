@@ -1,13 +1,23 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-<h2>Here are some links to help you start: </h2>
-<h3>Hola! Does this change Anna?</h3>
-<input type="text" [(ngModel)]="name">
-<h3>{{ name }}</h3>
+<div class="container">
+	<div class="row">
+		<h1 class="page-header">
+    		Welcome to {{ title }}!
+  		</h1>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<p class="alert alert-info">
+				Here are some components
+			</p>	
+		</div>
+		<app-servers></app-servers>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			Change something here --> <input type="text" [(ngModel)]="name">
+			<hr>
+			<h3>This Gonna change  {{ name }}</h3>
+		</div>
+	</div>
 
-<hr>
-<app-servers></app-servers>
+</div>

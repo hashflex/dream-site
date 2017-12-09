@@ -17,7 +17,7 @@ export class DisplayToggleComponent implements OnInit {
 
   onToggleText(){
   	this.isVisible = !this.isVisible;
-  	this.clicks.push(this.clicks.length + 1);
+  	this.clicks.push(new Date());
   }
 
   getClass(count){

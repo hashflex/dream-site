@@ -1,0 +1,19 @@
+<div class="container">
+	<button class="btn btn-primary btn-lg" (click)="onToggleText()">
+	Display Details
+	</button>
+	
+	<p *ngIf="isVisible">
+		Secret Password is written here.
+	</p>
+
+	<div class="col-md-12">
+		<h3>Clicks Made </h3>
+		<div class="card m-3" *ngFor="let click of clicks">
+			<div class="card-block p-3" [ngStyle]="{backgroundColor : getbackgroundColor(click)}" [ngClass]="getClass(click)">
+				This is clicked {{ click }} time.
+			</div>
+		</div>
+	</div>
+
+</div>

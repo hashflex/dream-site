@@ -8,6 +8,7 @@ import { ServersComponent } from './servers/servers.component';
 import { SuccessAlertComponent } from './success-alert/successalert.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { UserCreationComponent } from './user-creation/user-creation.component';
+import { DisplayToggleComponent } from './display-toggle/display-toggle.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserCreationComponent } from './user-creation/user-creation.component';
     ServersComponent,
     SuccessAlertComponent,
     WarningAlertComponent,
-    UserCreationComponent
+    UserCreationComponent,
+    DisplayToggleComponent
   ],
   imports: [
     BrowserModule,

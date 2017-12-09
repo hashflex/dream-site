@@ -1,22 +1,22 @@
 <div class="row">
 	<div class="col-md-12">
-		<input type="text" class="form-control" [(ngModel)] = "serverName">
+		<div class="form-group">
+			<input type="text" class="form-control" [(ngModel)] = "serverName">
+		</div>
 	</div>
 	<div class="col-md-12">
-		<p> {{serverName}} </p>
+		<div> You typed : {{serverName}} </div>
 	</div>
 </div>
 <div class="row">
 	<div class="col-md-12">
 		<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onServerCreation()">Add server</button>
-		<hr>
-		<p>{{ allowNewServer }}</p>
 	</div>
 	<div class="col-md-12">
 		{{ serverCreationStatus }}
 	</div>
+	<div class="col-md-12">
+		<h3>Created servers : </h3>
+		<app-server *ngFor="let server of servers"></app-server>
+	</div>
 </div>
-<h2 class="component-heading">Some components will be listed here: </h2>
-<app-server></app-server>
-<hr>
-<app-server></app-server>

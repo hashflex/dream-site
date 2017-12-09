@@ -1,33 +1,39 @@
 <!-- <div class="container">
-	<div class="row">
-		<h1 class="page-header">
-    		Welcome to {{ title }}!
-  		</h1>
+		<div class="row">
+				<h1 class="page-header">
+				Welcome to {{ title }}!
+				</h1>
+		</div>
+		<div class="row">
+				<div class="col-md-12">
+						<p class="alert alert-info">
+								Here are some components
+							</p>
+				</div>
+			<app-servers></app-servers>
+			<div app-servers></div>
+			<div class="app-servers"></div>
 	</div>
 	<div class="row">
-		<div class="col-md-12">
-			<p class="alert alert-info">
-				Here are some components
-			</p>	
-		</div>
-		<app-servers></app-servers>
-		<div app-servers></div>
-		<div class="app-servers"></div>
+			<div class="col-md-12">
+					Change something here <input type="text" [(ngModel)]="name">
+					<hr>
+					<h3>This Gonna change  {{ name }}</h3>
+			</div>
 	</div>
 	<div class="row">
-		<div class="col-md-12">
-			Change something here <input type="text" [(ngModel)]="name">
-			<hr>
-			<h3>This Gonna change  {{ name }}</h3>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<success-alert></success-alert>
-		</div>
-		<div class="col-md-12">
-			<warning-alert></warning-alert>
-		</div>
+			<div class="col-md-12">
+					<success-alert></success-alert>
+			</div>
+			<div class="col-md-12">
+					<warning-alert></warning-alert>
+			</div>
 	</div>
 </div> -->
 <app-user-creation></app-user-creation>
+<div class="container">
+	<app-server></app-server>
+	<app-server></app-server>
+	<app-server></app-server>
+	<app-server></app-server>
+</div>

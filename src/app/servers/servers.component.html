@@ -1,18 +1,14 @@
 <div class="row">
 	<div class="col-md-12">
 		<input type="text" class="form-control" [(ngModel)] = "serverName">
-
 	</div>
 	<div class="col-md-12">
 		<p> {{serverName}} </p>
 	</div>
 </div>
-
 <div class="row">
 	<div class="col-md-12">
-		<button class="btn btn-primary" [disabled]="!allowNewServer"
-		(click)="onServerCreation()"
-		>Add server</button>
+		<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onServerCreation()">Add server</button>
 		<hr>
 		<p>{{ allowNewServer }}</p>
 	</div>
@@ -20,9 +16,7 @@
 		{{ serverCreationStatus }}
 	</div>
 </div>
-
 <h2 class="component-heading">Some components will be listed here: </h2>
-
 <app-server></app-server>
 <hr>
 <app-server></app-server>

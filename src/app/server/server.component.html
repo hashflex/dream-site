@@ -1,3 +1,8 @@
 <p [ngStyle]="{color : getColor()}" [ngClass]="getClass()">
 	Server status for {{ serverID }} is {{ getStatus() }}
 </p>
+
+<!-- Alternative way of using ngClass -->
+<!-- <p [ngClass]="online : status === 'Online'">
+	Server status for {{ serverID }} is {{ getStatus() }}
+</p> -->

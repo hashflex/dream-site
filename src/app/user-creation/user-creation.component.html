@@ -4,23 +4,26 @@
 		User Creation
 		</h1>
 		<div class="col-md-12 panel">
-			<input type="text" class="form-control" (input)="validate($event)" [(ngModel)]="userName">
-			<br>
-			<button class="btn btn-primary" (click)="onUserAdd()">Add User Name</button>
-			<button class="btn btn-danger" (click)="resetUser()" [disabled]="userName === ''">Reset</button>
+			<div class="form-group">
+				<div class="form-group">
+					
+					<label>Username</label>
+					<input type="text" class="form-control" (input)="validate($event)" [(ngModel)]="userName">
+					<small class="form-text text-muted">Enter username here</small>
+					<button class="btn btn-primary" (click)="onUserAdd()">Add User Name</button>
+					<button class="btn btn-danger" (click)="resetUser()" [disabled]="userName === ''">Reset</button>
+				</div>
+				<div class="col-md-12">
+					<br/>
+					<div class="alert alert-danger" *ngIf="hasError" role="alert">
+						{{ errorMessage }}
+					</div>
+					<div class="alert alert-warning" *ngIf="!hasError && userName !== ''" role="alert">
+						{{ "You are entering : " + userName }}
+					</div>
+					<div class="alert alert-success" *ngIf="addedUserName !== ''" role="alert">
+						{{ hasError ? "" : successMessage + addedUserName }}
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="col-md-12">
-			<br/>
-			<div class="alert alert-danger" *ngIf="hasError">
-				{{ errorMessage }}
-			</div>
-			<div class="alert alert-warning" *ngIf="userName !== ''">
-				{{ "You are entering : " + userName }}
-			</div>
-			<br/>
-			<div class="alert alert-success" *ngIf="addedUserName !== ''">
-				{{ hasError ? "" : successMessage + addedUserName }}
-			</div>
-		</div>
-	</div>
-</div>

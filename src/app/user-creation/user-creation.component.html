@@ -11,11 +11,14 @@
 		</div>
 		<div class="col-md-12">
 			<br/>
-			<div class="alert alert-warning">
-				{{ hasError ? errorMessage : "You are entering " + userName }}
+			<div class="alert alert-danger" *ngIf="hasError">
+				{{ errorMessage }}
+			</div>
+			<div class="alert alert-warning" *ngIf="userName !== ''">
+				{{ "You are entering : " + userName }}
 			</div>
 			<br/>
-			<div class="alert alert-success">
+			<div class="alert alert-success" *ngIf="addedUserName !== ''">
 				{{ hasError ? "" : successMessage + addedUserName }}
 			</div>
 		</div>
